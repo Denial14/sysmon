@@ -3,7 +3,7 @@
 #include <sstream>
 
 namespace sysmon::parsers {
-    static CpuTimes parse_line(std::stringstream& iss){
+    static CpuTimes parse_line(std::istringstream& iss){
         CpuTimes t;
         iss >> t.user >> t.nice >> t.system >> t.idle >> t.iowait >> t.irq >> t.softirq >> t.steal >> t.guest >> t.guest_nice;
         return t;
@@ -17,9 +17,9 @@ namespace sysmon::parsers {
         
         for (const auto& line : *lines_opt){
             if (line.rfind("cpu", 0) != 0)
-                break;
+                continue;
             
-            std::stringstream iss;
+            std::istringstream iss(line);
             std::string label;
             iss >> label;
 

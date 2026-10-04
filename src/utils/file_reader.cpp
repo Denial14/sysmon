@@ -14,7 +14,7 @@ namespace sysmon::utils{
     }
 
     std::optional<std::vector<std::string>> read_lines(const std::string &path){
-        std::ifstream file;
+        std::ifstream file(path);
         if (!file.is_open()) 
             return std::nullopt;
 
