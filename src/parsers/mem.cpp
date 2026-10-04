@@ -13,9 +13,11 @@ namespace sysmon::parsers{
 
         for (const auto& line : *lines_opt){
             std::stringstream iss(line);
-            std::string uint;
+            std::string unit;
             std::string key;
             uint64_t value;
+
+            iss >> key >> value >> unit;
 
             if (!(key.empty()) && key.back() == ':') 
                 key.pop_back();
