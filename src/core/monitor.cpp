@@ -2,6 +2,8 @@
 #include <chrono>
 #include <unordered_map>
 #include <thread>
+#include <algorithm>
+#include <cmath>
 
 namespace sysmon::core {
 
@@ -43,24 +45,48 @@ Snapshot Monitor::take_snapshot() {
     result.swap_total_kb    = cur.mem.swap_total_kb;
     result.swap_used_kb     = cur.mem.swap_used_kb();
 
+    double mem_pct = 0.0, swap_pct = 0.0;
+    if (result.mem_total_kb > 0) {
+        mem_pct  = 100.0 * result.mem_used_kb / result.mem_total_kb;
+    }
+    if (result.swap_total_kb > 0) {
+        swap_pct = 100.0 * result.swap_used_kb / result.swap_total_kb;
+    }
+
+    double cpu_pct = 0.0;
     if (has_prev_) {
         uint64_t total_delta  = cur.cpu.total.total()        - prev_.cpu.total.total();
         uint64_t active_delta = cur.cpu.total.total_active() - prev_.cpu.total.total_active();
 
         if (total_delta > 0) {
-            result.cpu_total_percent = 100.0 * active_delta / total_delta;
+            cpu_pct = 100.0 * active_delta / total_delta;
         }
+        result.cpu_total_percent = cpu_pct;
 
         size_t n = std::min(cur.cpu.cores.size(), prev_.cpu.cores.size());
         result.cpu_per_core_percent.resize(n);
+
+        if (cores_history_.size() != n) {
+            cores_history_.clear();
+            cores_history_.resize(n);
+        }
+
         for (size_t i = 0; i < n; ++i) {
             uint64_t td = cur.cpu.cores[i].total()        - prev_.cpu.cores[i].total();
             uint64_t ad = cur.cpu.cores[i].total_active() - prev_.cpu.cores[i].total_active();
             if (td > 0) {
-                result.cpu_per_core_percent[i] = 100.0 * ad / td;
+                double core_pct = 100.0 * ad / td;
+                result.cpu_per_core_percent[i] = core_pct;
+                cores_history_[i].push(core_pct);
+            } else {
+                cores_history_[i].push(0.0);
             }
         }
     }
+
+    cpu_history_.push(cpu_pct);
+    mem_history_.push(mem_pct);
+    swap_history_.push(swap_pct);
 
     std::unordered_map<int, uint64_t> prev_cpu_time;
     if (has_prev_) {
