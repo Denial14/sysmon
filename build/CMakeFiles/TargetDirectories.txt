@@ -1,5 +1,0 @@
-/home/danila/kyrsach/sysmon/build/CMakeFiles/sysmon.dir
-/home/danila/kyrsach/sysmon/build/CMakeFiles/edit_cache.dir
-/home/danila/kyrsach/sysmon/build/CMakeFiles/rebuild_cache.dir
-/home/danila/kyrsach/sysmon/build/CMakeFiles/sysmon_autogen_timestamp_deps.dir
-/home/danila/kyrsach/sysmon/build/CMakeFiles/sysmon_autogen.dir
