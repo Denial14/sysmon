@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/danila/kyrsach/sysmon/src/parsers/mem.cpp" "CMakeFiles/sysmon.dir/src/parsers/mem.cpp.o" "gcc" "CMakeFiles/sysmon.dir/src/parsers/mem.cpp.o.d"
   "/home/danila/kyrsach/sysmon/src/parsers/process.cpp" "CMakeFiles/sysmon.dir/src/parsers/process.cpp.o" "gcc" "CMakeFiles/sysmon.dir/src/parsers/process.cpp.o.d"
   "/home/danila/kyrsach/sysmon/src/ui/console_top.cpp" "CMakeFiles/sysmon.dir/src/ui/console_top.cpp.o" "gcc" "CMakeFiles/sysmon.dir/src/ui/console_top.cpp.o.d"
+  "/home/danila/kyrsach/sysmon/src/ui/qt/GraphWidget.cpp" "CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o" "gcc" "CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o.d"
   "/home/danila/kyrsach/sysmon/src/ui/qt/MainWindow.cpp" "CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o" "gcc" "CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o.d"
   "/home/danila/kyrsach/sysmon/src/ui/qt/ProcessTableModel.cpp" "CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.o" "gcc" "CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.o.d"
   "/home/danila/kyrsach/sysmon/src/utils/file_reader.cpp" "CMakeFiles/sysmon.dir/src/utils/file_reader.cpp.o" "gcc" "CMakeFiles/sysmon.dir/src/utils/file_reader.cpp.o.d"

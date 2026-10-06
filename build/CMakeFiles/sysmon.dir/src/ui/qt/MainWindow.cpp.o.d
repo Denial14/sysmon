@@ -339,6 +339,8 @@ CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o: \
  /home/danila/kyrsach/sysmon/src/ui/qt/ProcessTableModel.hpp \
  /usr/include/qt6/QtCore/QAbstractTableModel \
  /usr/include/qt6/QtCore/qabstractitemmodel.h \
+ /home/danila/kyrsach/sysmon/src/ui/qt/GraphWidget.hpp \
+ /usr/include/qt6/QtWidgets/QWidget /usr/include/qt6/QtCore/QString \
  /usr/include/qt6/QtWidgets/QTableView \
  /usr/include/qt6/QtWidgets/qtableview.h \
  /usr/include/qt6/QtWidgets/qabstractitemview.h \
@@ -367,7 +369,7 @@ CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o: \
  /usr/include/qt6/QtWidgets/qlayoutitem.h \
  /usr/include/qt6/QtWidgets/qgridlayout.h \
  /usr/include/qt6/QtWidgets/QHBoxLayout \
- /usr/include/qt6/QtWidgets/QWidget /usr/include/qt6/QtWidgets/QLabel \
+ /usr/include/qt6/QtWidgets/QGridLayout /usr/include/qt6/QtWidgets/QLabel \
  /usr/include/qt6/QtWidgets/qlabel.h /usr/include/qt6/QtGui/qpicture.h \
  /usr/include/qt6/QtCore/qiodevice.h \
  /usr/include/qt6/QtGui/qtextdocument.h /usr/include/qt6/QtCore/qurl.h \
@@ -377,6 +379,7 @@ CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o: \
  /usr/include/qt6/QtCore/QSortFilterProxyModel \
  /usr/include/qt6/QtCore/qsortfilterproxymodel.h \
  /usr/include/qt6/QtCore/qabstractproxymodel.h \
+ /usr/include/qt6/QtWidgets/QTabWidget \
  /usr/include/qt6/QtWidgets/QMessageBox \
  /usr/include/qt6/QtWidgets/qmessagebox.h \
  /usr/include/qt6/QtWidgets/qdialog.h \

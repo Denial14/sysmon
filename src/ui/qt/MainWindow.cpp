@@ -1,14 +1,17 @@
 #include "MainWindow.hpp"
 #include "ProcessTableModel.hpp"
+#include "GraphWidget.hpp"
 #include <QTableView>
 #include <QTimer>
 #include <QHeaderView>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
+#include <QGridLayout>
 #include <QWidget>
 #include <QLabel>
 #include <QPushButton>
 #include <QSortFilterProxyModel>
+#include <QTabWidget>
 #include <QMessageBox>
 #include <QDebug>
 #include <csignal>
@@ -19,7 +22,7 @@ MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent) {
 
     setWindowTitle("sysmon");
-    resize(1100, 700);
+    resize(1200, 800);
 
     auto* central = new QWidget(this);
     auto* main_layout = new QVBoxLayout(central);
@@ -32,6 +35,19 @@ MainWindow::MainWindow(QWidget* parent)
     cpu_label_  = new QLabel("CPU: --", this);
     mem_label_  = new QLabel("RAM: --", this);
     proc_label_ = new QLabel("Processes: --", this);
+
+    auto* sep1 = new QLabel("|", this);
+    auto* sep2 = new QLabel("|", this);
+    sep1->setStyleSheet("color: gray;");
+    sep2->setStyleSheet("color: gray;");
+
+    top_panel->addWidget(cpu_label_);
+    top_panel->addWidget(sep1);
+    top_panel->addWidget(mem_label_);
+    top_panel->addWidget(sep2);
+    top_panel->addWidget(proc_label_);
+    top_panel->addStretch();
+    top_panel->addWidget(kill_button_);
 
     cpu_label_->setFont(mono_font);
     mem_label_->setFont(mono_font);
@@ -49,13 +65,36 @@ MainWindow::MainWindow(QWidget* parent)
 
     main_layout->addLayout(top_panel);
 
+    tabs_ = new QTabWidget(this);
+    buildProcessesTab(tabs_);
+    buildGraphsTab(tabs_);
+
+    connect(tabs_, &QTabWidget::currentChanged, this, [this](int index) {
+        kill_button_->setVisible(index == 0);
+    });
+
+    main_layout->addWidget(tabs_);
+    setCentralWidget(central);
+
+    timer_ = new QTimer(this);
+    connect(timer_, &QTimer::timeout, this, &MainWindow::updateSnapshot);
+    timer_->start(1000);
+
+    monitor_.take_snapshot();
+    updateSnapshot();
+}
+
+void MainWindow::buildProcessesTab(QTabWidget* tabs) {
+    auto* page = new QWidget(this);
+    auto* layout = new QVBoxLayout(page);
+
     model_ = new ProcessTableModel(this);
 
     proxy_ = new QSortFilterProxyModel(this);
     proxy_->setSourceModel(model_);
-    proxy_->setSortRole(Qt::UserRole);   // сортировать по числу, а не строке
+    proxy_->setSortRole(Qt::UserRole);
 
-    table_ = new QTableView(this);
+    table_ = new QTableView(page);
     table_->setModel(proxy_);
     table_->setSelectionBehavior(QAbstractItemView::SelectRows);
     table_->setSelectionMode(QAbstractItemView::SingleSelection);
@@ -66,18 +105,26 @@ MainWindow::MainWindow(QWidget* parent)
     table_->horizontalHeader()->setStretchLastSection(true);
     table_->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
 
-    main_layout->addWidget(table_);
-    setCentralWidget(central);
-
-    timer_ = new QTimer(this);
-    connect(timer_, &QTimer::timeout, this, &MainWindow::updateSnapshot);
-    timer_->start(1000);
-
-    monitor_.take_snapshot();
-
-    updateSnapshot();
+    layout->addWidget(table_);
+    tabs->addTab(page, "Процессы");
 
     table_->sortByColumn(2, Qt::DescendingOrder);
+}
+
+void MainWindow::buildGraphsTab(QTabWidget* tabs) {
+    auto* page = new QWidget(this);
+    auto* layout = new QGridLayout(page);
+
+    cpu_graph_ = new GraphWidget("CPU", &monitor_.cpu_history(), 100.0, page);
+    cpu_graph_->setAutoScale(true); 
+
+    mem_graph_ = new GraphWidget("RAM", &monitor_.mem_history(), 100.0, page);
+    mem_graph_->setAutoScale(false);
+
+    layout->addWidget(cpu_graph_, 0, 0);
+    layout->addWidget(mem_graph_, 0, 1);
+
+    tabs->addTab(page, "Графики");
 }
 
 void MainWindow::updateSnapshot() {
@@ -102,6 +149,31 @@ void MainWindow::updateSnapshot() {
 
     proc_label_->setText(QString("Processes: %1")
                             .arg(snap.processes.size()));
+
+    const auto& core_hist = monitor_.cores_history();
+    if (core_graphs_.empty() && !core_hist.empty()) {
+        QWidget* graphs_page = tabs_->widget(1);
+        auto* grid = qobject_cast<QGridLayout*>(graphs_page->layout());
+        if (grid) {
+            const int cols = 3;
+            for (std::size_t i = 0; i < core_hist.size(); ++i) {
+                auto* g = new GraphWidget(
+                    QString("core %1").arg(i),
+                    &core_hist[i],
+                    100.0,
+                    graphs_page);
+                g->setAutoScale(false);
+                int row = 1 + static_cast<int>(i) / cols;
+                int col = static_cast<int>(i) % cols;
+                grid->addWidget(g, row, col);
+                core_graphs_.push_back(g);
+            }
+        }
+    }
+
+    if (cpu_graph_) cpu_graph_->update();
+    if (mem_graph_) mem_graph_->update();
+    for (auto* g : core_graphs_) g->update();
 }
 
 void MainWindow::killSelectedProcess() {

@@ -177,10 +177,24 @@ CMakeFiles/sysmon.dir/src/ui/console_top.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sysmon.dir/src/ui/console_top.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danila/kyrsach/sysmon/src/ui/console_top.cpp -o CMakeFiles/sysmon.dir/src/ui/console_top.cpp.s
 
+CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o: CMakeFiles/sysmon.dir/flags.make
+CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o: /home/danila/kyrsach/sysmon/src/ui/qt/GraphWidget.cpp
+CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o: CMakeFiles/sysmon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/danila/kyrsach/sysmon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o -MF CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o.d -o CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o -c /home/danila/kyrsach/sysmon/src/ui/qt/GraphWidget.cpp
+
+CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/danila/kyrsach/sysmon/src/ui/qt/GraphWidget.cpp > CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.i
+
+CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danila/kyrsach/sysmon/src/ui/qt/GraphWidget.cpp -o CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.s
+
 CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o: CMakeFiles/sysmon.dir/flags.make
 CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o: /home/danila/kyrsach/sysmon/src/ui/qt/MainWindow.cpp
 CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o: CMakeFiles/sysmon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/danila/kyrsach/sysmon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/danila/kyrsach/sysmon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o -MF CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o.d -o CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o -c /home/danila/kyrsach/sysmon/src/ui/qt/MainWindow.cpp
 
 CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.i: cmake_force
@@ -194,7 +208,7 @@ CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.s: cmake_force
 CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.o: CMakeFiles/sysmon.dir/flags.make
 CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.o: /home/danila/kyrsach/sysmon/src/ui/qt/ProcessTableModel.cpp
 CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.o: CMakeFiles/sysmon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/danila/kyrsach/sysmon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/danila/kyrsach/sysmon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.o -MF CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.o.d -o CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.o -c /home/danila/kyrsach/sysmon/src/ui/qt/ProcessTableModel.cpp
 
 CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.i: cmake_force
@@ -208,7 +222,7 @@ CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.s: cmake_force
 CMakeFiles/sysmon.dir/src/utils/file_reader.cpp.o: CMakeFiles/sysmon.dir/flags.make
 CMakeFiles/sysmon.dir/src/utils/file_reader.cpp.o: /home/danila/kyrsach/sysmon/src/utils/file_reader.cpp
 CMakeFiles/sysmon.dir/src/utils/file_reader.cpp.o: CMakeFiles/sysmon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/danila/kyrsach/sysmon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/sysmon.dir/src/utils/file_reader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/danila/kyrsach/sysmon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/sysmon.dir/src/utils/file_reader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sysmon.dir/src/utils/file_reader.cpp.o -MF CMakeFiles/sysmon.dir/src/utils/file_reader.cpp.o.d -o CMakeFiles/sysmon.dir/src/utils/file_reader.cpp.o -c /home/danila/kyrsach/sysmon/src/utils/file_reader.cpp
 
 CMakeFiles/sysmon.dir/src/utils/file_reader.cpp.i: cmake_force
@@ -228,6 +242,7 @@ sysmon_OBJECTS = \
 "CMakeFiles/sysmon.dir/src/parsers/mem.cpp.o" \
 "CMakeFiles/sysmon.dir/src/parsers/process.cpp.o" \
 "CMakeFiles/sysmon.dir/src/ui/console_top.cpp.o" \
+"CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o" \
 "CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o" \
 "CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.o" \
 "CMakeFiles/sysmon.dir/src/utils/file_reader.cpp.o"
@@ -242,6 +257,7 @@ sysmon: CMakeFiles/sysmon.dir/src/parsers/cpu.cpp.o
 sysmon: CMakeFiles/sysmon.dir/src/parsers/mem.cpp.o
 sysmon: CMakeFiles/sysmon.dir/src/parsers/process.cpp.o
 sysmon: CMakeFiles/sysmon.dir/src/ui/console_top.cpp.o
+sysmon: CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o
 sysmon: CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o
 sysmon: CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.o
 sysmon: CMakeFiles/sysmon.dir/src/utils/file_reader.cpp.o
@@ -253,7 +269,7 @@ sysmon: /usr/lib64/libGLX.so
 sysmon: /usr/lib64/libOpenGL.so
 sysmon: /usr/lib64/libQt6Core.so.6.11.2
 sysmon: CMakeFiles/sysmon.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/danila/kyrsach/sysmon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable sysmon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/danila/kyrsach/sysmon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable sysmon"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sysmon.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

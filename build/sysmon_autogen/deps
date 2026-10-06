@@ -16,6 +16,8 @@ sysmon_autogen/timestamp: \
 	/home/danila/kyrsach/sysmon/src/parsers/process.hpp \
 	/home/danila/kyrsach/sysmon/src/ui/console_top.cpp \
 	/home/danila/kyrsach/sysmon/src/ui/console_top.hpp \
+	/home/danila/kyrsach/sysmon/src/ui/qt/GraphWidget.cpp \
+	/home/danila/kyrsach/sysmon/src/ui/qt/GraphWidget.hpp \
 	/home/danila/kyrsach/sysmon/src/ui/qt/MainWindow.cpp \
 	/home/danila/kyrsach/sysmon/src/ui/qt/MainWindow.hpp \
 	/home/danila/kyrsach/sysmon/src/ui/qt/ProcessTableModel.cpp \
@@ -293,6 +295,7 @@ sysmon_autogen/timestamp: \
 	/usr/include/locale.h \
 	/usr/include/pthread.h \
 	/usr/include/qt6/QtCore/QAbstractTableModel \
+	/usr/include/qt6/QtCore/QString \
 	/usr/include/qt6/QtCore/q17memory.h \
 	/usr/include/qt6/QtCore/q20bit.h \
 	/usr/include/qt6/QtCore/q20functional.h \
@@ -449,6 +452,7 @@ sysmon_autogen/timestamp: \
 	/usr/include/qt6/QtGui/qtransform.h \
 	/usr/include/qt6/QtGui/qwindowdefs.h \
 	/usr/include/qt6/QtWidgets/QMainWindow \
+	/usr/include/qt6/QtWidgets/QWidget \
 	/usr/include/qt6/QtWidgets/qmainwindow.h \
 	/usr/include/qt6/QtWidgets/qsizepolicy.h \
 	/usr/include/qt6/QtWidgets/qtabwidget.h \

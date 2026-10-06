@@ -9,6 +9,7 @@ sysmon: \
   CMakeFiles/sysmon.dir/src/parsers/mem.cpp.o \
   CMakeFiles/sysmon.dir/src/parsers/process.cpp.o \
   CMakeFiles/sysmon.dir/src/ui/console_top.cpp.o \
+  CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o \
   CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o \
   CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.o \
   CMakeFiles/sysmon.dir/src/utils/file_reader.cpp.o \
@@ -103,6 +104,8 @@ CMakeFiles/sysmon.dir/src/parsers/mem.cpp.o:
 CMakeFiles/sysmon.dir/src/parsers/process.cpp.o:
 
 CMakeFiles/sysmon.dir/src/ui/console_top.cpp.o:
+
+CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o:
 
 CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o:
 

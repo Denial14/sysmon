@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sysmon.dir/src/parsers/process.cpp.o.d"
   "CMakeFiles/sysmon.dir/src/ui/console_top.cpp.o"
   "CMakeFiles/sysmon.dir/src/ui/console_top.cpp.o.d"
+  "CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o"
+  "CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o.d"
   "CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o"
   "CMakeFiles/sysmon.dir/src/ui/qt/MainWindow.cpp.o.d"
   "CMakeFiles/sysmon.dir/src/ui/qt/ProcessTableModel.cpp.o"

@@ -1,8 +1,7 @@
-CMakeFiles/sysmon.dir/sysmon_autogen/mocs_compilation.cpp.o: \
- /home/danila/kyrsach/sysmon/build/sysmon_autogen/mocs_compilation.cpp \
+CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o: \
+ /home/danila/kyrsach/sysmon/src/ui/qt/GraphWidget.cpp \
  /usr/include/stdc-predef.h \
- /home/danila/kyrsach/sysmon/build/sysmon_autogen/WLEM7A2TAU/moc_GraphWidget.cpp \
- /home/danila/kyrsach/sysmon/build/sysmon_autogen/WLEM7A2TAU/../../../src/ui/qt/GraphWidget.hpp \
+ /home/danila/kyrsach/sysmon/src/ui/qt/GraphWidget.hpp \
  /usr/include/qt6/QtWidgets/QWidget /usr/include/qt6/QtWidgets/qwidget.h \
  /usr/include/qt6/QtWidgets/qtwidgetsglobal.h \
  /usr/include/qt6/QtGui/qtguiglobal.h /usr/include/qt6/QtCore/qglobal.h \
@@ -329,21 +328,28 @@ CMakeFiles/sysmon.dir/sysmon_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt6/QtWidgets/qsizepolicy.h \
  /usr/include/qt6/QtGui/qcursor.h /usr/include/qt6/QtGui/qbitmap.h \
  /usr/include/qt6/QtCore/QString \
- /home/danila/kyrsach/sysmon/build/sysmon_autogen/WLEM7A2TAU/../../../src/ui/qt/../../core/ring_buffer.hpp \
- /usr/include/qt6/QtCore/qtmochelpers.h \
- /usr/include/qt6/QtCore/qtmocconstants.h \
- /usr/include/qt6/QtCore/q20algorithm.h \
- /home/danila/kyrsach/sysmon/build/sysmon_autogen/WLEM7A2TAU/moc_MainWindow.cpp \
- /home/danila/kyrsach/sysmon/build/sysmon_autogen/WLEM7A2TAU/../../../src/ui/qt/MainWindow.hpp \
- /usr/include/qt6/QtWidgets/QMainWindow \
- /usr/include/qt6/QtWidgets/qmainwindow.h \
- /usr/include/qt6/QtWidgets/qtabwidget.h \
- /home/danila/kyrsach/sysmon/build/sysmon_autogen/WLEM7A2TAU/../../../src/ui/qt/../../core/monitor.hpp \
- /home/danila/kyrsach/sysmon/build/sysmon_autogen/WLEM7A2TAU/../../../src/ui/qt/../../core/snapshot.hpp \
- /home/danila/kyrsach/sysmon/build/sysmon_autogen/WLEM7A2TAU/../../../src/ui/qt/../../core/../parsers/process.hpp \
- /home/danila/kyrsach/sysmon/build/sysmon_autogen/WLEM7A2TAU/../../../src/ui/qt/../../core/../parsers/cpu.hpp \
- /home/danila/kyrsach/sysmon/build/sysmon_autogen/WLEM7A2TAU/../../../src/ui/qt/../../core/../parsers/mem.hpp \
- /home/danila/kyrsach/sysmon/build/sysmon_autogen/WLEM7A2TAU/moc_ProcessTableModel.cpp \
- /home/danila/kyrsach/sysmon/build/sysmon_autogen/WLEM7A2TAU/../../../src/ui/qt/ProcessTableModel.hpp \
- /usr/include/qt6/QtCore/QAbstractTableModel \
- /usr/include/qt6/QtCore/qabstractitemmodel.h
+ /home/danila/kyrsach/sysmon/src/ui/qt/../../core/ring_buffer.hpp \
+ /usr/include/qt6/QtGui/QPainter /usr/include/qt6/QtGui/qpainter.h \
+ /usr/include/qt6/QtGui/qtextoption.h /usr/include/qt6/QtGui/qpen.h \
+ /usr/include/qt6/QtGui/QPainterPath \
+ /usr/include/qt6/QtGui/qpainterpath.h /usr/include/qt6/QtGui/QPaintEvent \
+ /usr/include/qt6/QtGui/qevent.h /usr/include/qt6/QtCore/qcoreevent.h \
+ /usr/include/qt6/QtCore/qbasictimer.h \
+ /usr/include/qt6/QtCore/qabstracteventdispatcher.h \
+ /usr/include/qt6/QtCore/qeventloop.h \
+ /usr/include/qt6/QtCore/qdeadlinetimer.h \
+ /usr/include/qt6/QtCore/qiodevice.h /usr/include/qt6/QtCore/qurl.h \
+ /usr/include/qt6/QtGui/qeventpoint.h /usr/include/qt6/QtGui/qvector2d.h \
+ /usr/include/qt6/QtGui/qvectornd.h \
+ /usr/include/qt6/QtGui/qpointingdevice.h \
+ /usr/include/qt6/QtGui/qinputdevice.h /usr/include/qt6/QtGui/qscreen.h \
+ /usr/include/qt6/QtCore/QList /usr/include/qt6/QtCore/QObject \
+ /usr/include/qt6/QtCore/QRect /usr/include/qt6/QtCore/QSize \
+ /usr/include/qt6/QtCore/QSizeF /usr/include/qt6/QtGui/QTransform \
+ /usr/include/qt6/QtCore/qnativeinterface.h \
+ /usr/include/qt6/QtGui/qscreen_platform.h \
+ /usr/include/qt6/QtGui/qguiapplication.h \
+ /usr/include/qt6/QtCore/qcoreapplication.h \
+ /usr/include/qt6/QtCore/qcoreapplication_platform.h \
+ /usr/include/qt6/QtGui/qinputmethod.h /usr/include/qt6/QtCore/qlocale.h \
+ /usr/include/qt6/QtGui/qguiapplication_platform.h

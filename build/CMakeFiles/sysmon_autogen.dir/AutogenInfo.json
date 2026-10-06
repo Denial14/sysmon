@@ -509,6 +509,12 @@
 			null
 		],
 		[
+			"/home/danila/kyrsach/sysmon/src/ui/qt/GraphWidget.hpp",
+			"MU",
+			"WLEM7A2TAU/moc_GraphWidget.cpp",
+			null
+		],
+		[
 			"/home/danila/kyrsach/sysmon/src/ui/qt/MainWindow.hpp",
 			"MU",
 			"WLEM7A2TAU/moc_MainWindow.cpp",
@@ -592,6 +598,7 @@
 		[ "/home/danila/kyrsach/sysmon/src/parsers/mem.cpp", "MU", null ],
 		[ "/home/danila/kyrsach/sysmon/src/parsers/process.cpp", "MU", null ],
 		[ "/home/danila/kyrsach/sysmon/src/ui/console_top.cpp", "MU", null ],
+		[ "/home/danila/kyrsach/sysmon/src/ui/qt/GraphWidget.cpp", "MU", null ],
 		[ "/home/danila/kyrsach/sysmon/src/ui/qt/MainWindow.cpp", "MU", null ],
 		[
 			"/home/danila/kyrsach/sysmon/src/ui/qt/ProcessTableModel.cpp",

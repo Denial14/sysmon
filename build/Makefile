@@ -299,6 +299,30 @@ src/ui/console_top.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sysmon.dir/build.make CMakeFiles/sysmon.dir/src/ui/console_top.cpp.s
 .PHONY : src/ui/console_top.cpp.s
 
+src/ui/qt/GraphWidget.o: src/ui/qt/GraphWidget.cpp.o
+.PHONY : src/ui/qt/GraphWidget.o
+
+# target to build an object file
+src/ui/qt/GraphWidget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sysmon.dir/build.make CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.o
+.PHONY : src/ui/qt/GraphWidget.cpp.o
+
+src/ui/qt/GraphWidget.i: src/ui/qt/GraphWidget.cpp.i
+.PHONY : src/ui/qt/GraphWidget.i
+
+# target to preprocess a source file
+src/ui/qt/GraphWidget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sysmon.dir/build.make CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.i
+.PHONY : src/ui/qt/GraphWidget.cpp.i
+
+src/ui/qt/GraphWidget.s: src/ui/qt/GraphWidget.cpp.s
+.PHONY : src/ui/qt/GraphWidget.s
+
+# target to generate assembly for a file
+src/ui/qt/GraphWidget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sysmon.dir/build.make CMakeFiles/sysmon.dir/src/ui/qt/GraphWidget.cpp.s
+.PHONY : src/ui/qt/GraphWidget.cpp.s
+
 src/ui/qt/MainWindow.o: src/ui/qt/MainWindow.cpp.o
 .PHONY : src/ui/qt/MainWindow.o
 
@@ -424,6 +448,9 @@ help:
 	@echo "... src/ui/console_top.o"
 	@echo "... src/ui/console_top.i"
 	@echo "... src/ui/console_top.s"
+	@echo "... src/ui/qt/GraphWidget.o"
+	@echo "... src/ui/qt/GraphWidget.i"
+	@echo "... src/ui/qt/GraphWidget.s"
 	@echo "... src/ui/qt/MainWindow.o"
 	@echo "... src/ui/qt/MainWindow.i"
 	@echo "... src/ui/qt/MainWindow.s"
